@@ -1,0 +1,19 @@
+const fs=require('fs');
+const path=require('path');
+
+//define file path
+const sourceFile = path.join(__dirname, 'source.txt');
+const destinationFile = path.join(__dirname, 'destination.txt');
+
+// Check if source file exists
+if (fs.existsSync(sourceFile)) {
+  // Read content from source file
+  const content = fs.readFileSync(sourceFile, 'utf8');
+
+  // Write content to destination file
+  fs.writeFileSync(destinationFile, content);
+
+  console.log('File copied successfully!');
+} else {
+  console.log('Source file does not exist.');
+}
