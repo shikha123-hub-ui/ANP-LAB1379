@@ -1,0 +1,12 @@
+import React from 'react';
+import Lab from './lab6';
+
+function App() {
+  return (
+    <div>
+      <Lab />
+    </div>
+  );
+}
+
+export default App;
